@@ -2,12 +2,16 @@
 
 module.exports = {
   development: {
-    client: 'mysql',
+    client: 'mysql2',
     connection: {
        database: 'knex',
        user: 'root',
        password: '',
        host:'127.0.0.1'
+    },
+    migrations:{
+      tableName: 'knex_migrations',
+      directory: `${__dirname}/src/database/migrations`
     }
   },
 
